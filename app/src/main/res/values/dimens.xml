@@ -12,4 +12,30 @@
     <dimen name="BU8">64dp</dimen>
     <dimen name="BU9">72dp</dimen>
     <dimen name="BU10">98dp</dimen>
+
+    <dimen name="SP1">1sp</dimen>
+    <dimen name="SP2">2sp</dimen>
+    <dimen name="SP4">4sp</dimen>
+    <dimen name="SP8">8sp</dimen>
+    <dimen name="SP12">12sp</dimen>
+    <dimen name="SP14">14sp</dimen>
+    <dimen name="SP15">15sp</dimen>
+    <dimen name="SP17">17sp</dimen>
+    <dimen name="SP18">18sp</dimen>
+    <dimen name="SP20">20sp</dimen>
+    <dimen name="SP22">22sp</dimen>
+    <dimen name="SP24">24sp</dimen>
+    <dimen name="SP26">26sp</dimen>
+    <dimen name="SP28">28sp</dimen>
+    <dimen name="SP36">36sp</dimen>
+
+
+    <dimen name="app_bar_text">@dimen/SP15</dimen>
+    <dimen name="default_padding">@dimen/BU5</dimen>
+
+    <dimen name="default_text">@dimen/SP12</dimen>
+    <dimen name="button_text">@dimen/SP12</dimen>
+
+    <dimen name="button_height">50dp</dimen>
+    <dimen name="button_width">100dp</dimen>
 </resources>

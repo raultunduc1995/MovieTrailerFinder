@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_bar_text">@dimen/SP20</dimen>
+    <dimen name="default_padding">@dimen/BU6</dimen>
+
+    <dimen name="default_text">@dimen/SP18</dimen>
+    <dimen name="button_text">@dimen/SP18</dimen>
+
+    <dimen name="button_height">70dp</dimen>
+    <dimen name="button_width">150dp</dimen>
+</resources>
