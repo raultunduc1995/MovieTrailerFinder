@@ -21,8 +21,5 @@ class MoviesViewModel {
   fun getMoviesDataFlowable(): Flowable<List<Movie>> =
     ApiProvider.getMoviesApi()
       .getMovies(BuildConfig.MOVIES_API_KEY)
-      .map { result ->
-        Thread.sleep(5000)
-        result.results
-      }
+      .map { result -> result.results }
 }
