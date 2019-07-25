@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:padding="@dimen/BU5">
+
+    <TextView android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              style="@style/TextAppearance.AppCompat.Body1"
+              android:text="@string/layout_selection_alert_message"
+              android:textAlignment="center"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              android:id="@+id/description"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_constraintVertical_bias="0.0"/>
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            android:layout_marginTop="32dp"
+            android:id="@+id/selectListButton"
+            android:text="@string/list_selection_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/selectGridButton"/>
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description"
+            android:layout_marginTop="32dp"
+            android:id="@+id/selectGridButton"
+            android:text="@string/grid_selection_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/selectListButton"
+    />
+</android.support.constraint.ConstraintLayout>

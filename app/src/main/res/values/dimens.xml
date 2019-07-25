@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paddings -->
+    <dimen name="BU0">1dp</dimen>
+    <dimen name="BU1">2dp</dimen>
+    <dimen name="BU2">4dp</dimen>
+    <dimen name="BU3">8dp</dimen>
+    <dimen name="BU4">12dp</dimen>
+    <dimen name="BU5">24dp</dimen>
+    <dimen name="BU6">36dp</dimen>
+    <dimen name="BU7">48dp</dimen>
+    <dimen name="BU8">64dp</dimen>
+    <dimen name="BU9">72dp</dimen>
+    <dimen name="BU10">98dp</dimen>
+</resources>
