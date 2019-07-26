@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:padding="@dimen/default_padding">
+
+    <FrameLayout android:id="@+id/moviePosterContainer"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 android:background="@drawable/image_border">
+
+        <ImageView android:id="@+id/moviePoster"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"/>
+
+        <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="@dimen/BU8"
+                android:layout_height="@dimen/BU8"
+                android:layout_gravity="center"
+                android:indeterminate="true"/>
+    </FrameLayout>
+
+
+    <TextView android:id="@+id/movieTitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="32dp"
+              app:layout_constraintStart_toEndOf="@+id/moviePosterContainer"
+              android:layout_marginTop="16dp"
+              android:text="@string/app_name"
+              android:textSize="@dimen/default_title_text"
+              app:layout_constraintTop_toBottomOf="@+id/movieId"/>
+
+    <TextView android:id="@+id/movieDescription"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="32dp"
+              android:text="@string/app_name"
+              android:textSize="@dimen/default_text"
+              app:layout_constraintTop_toBottomOf="@+id/moviePosterContainer"
+              app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              app:layout_constraintTop_toTopOf="parent"
+              android:layout_marginStart="32dp"
+              app:layout_constraintStart_toEndOf="@+id/moviePosterContainer"
+              android:text="@string/app_name"
+              android:textSize="@dimen/default_title_text"
+              android:id="@+id/movieId"/>
+</android.support.constraint.ConstraintLayout>

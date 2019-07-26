@@ -31,6 +31,7 @@ allprojects {
     ext.rxjavaVersion = "2.1.0"
     ext.rxandroidVersion = "2.0.2"
     ext.retrofitVersion = "2.1.0"
+    ext.picasso = "2.71828"
 }
 
 task clean(type: Delete) {

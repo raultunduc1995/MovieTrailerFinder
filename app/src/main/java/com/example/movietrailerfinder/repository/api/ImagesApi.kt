@@ -5,6 +5,6 @@ import retrofit2.http.Path
 
 interface ImagesApi {
 
-  @GET("t/p/w185/{poster_path}")
+  @GET("{poster_path}")
   fun getPosterImageFor(@Path("poster_path") posterPath: String)
 }

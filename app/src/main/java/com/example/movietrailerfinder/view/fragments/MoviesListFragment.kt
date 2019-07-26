@@ -1,7 +1,6 @@
 package com.example.movietrailerfinder.view.fragments
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.DividerItemDecoration
@@ -17,7 +16,6 @@ import com.example.movietrailerfinder.utils.hide
 import com.example.movietrailerfinder.utils.setTitleOnToolbar
 import com.example.movietrailerfinder.utils.show
 import com.example.movietrailerfinder.view.activities.MovieDetailsActivity
-import com.example.movietrailerfinder.view.activities.MoviesActivity
 import com.example.movietrailerfinder.view.fragments.base.RxFragment
 import com.example.movietrailerfinder.viewmodel.MoviesViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -30,7 +28,7 @@ class MoviesListFragment : RxFragment() {
     private const val TAG = "MoviesListFragment"
   }
 
-  lateinit var adapter: MoviesAdapter
+  private lateinit var adapter: MoviesAdapter
 
   override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
     (activity as AppCompatActivity).setTitleOnToolbar(R.string.movies_list_title)
@@ -87,7 +85,11 @@ class MoviesListFragment : RxFragment() {
   }
 }
 
-class MoviesAdapter(private val context: Context?, val data: MutableList<Movie>, val onMovieSelected: (movie: Movie) -> Unit) :
+class MoviesAdapter(
+  private val context: Context?,
+  val data: MutableList<Movie>,
+  val onMovieSelected: (movie: Movie) -> Unit
+) :
   RecyclerView.Adapter<RecyclerView.ViewHolder>() {
   override fun onCreateViewHolder(p0: ViewGroup, p1: Int): RecyclerView.ViewHolder {
     return MoviesHolder(LayoutInflater.from(context).inflate(R.layout.fragment_movie_row, p0, false))

@@ -7,4 +7,5 @@
     <string name="grid_selection_button">Grid</string>
 
     <string name="movies_list_title">Movies</string>
+    <string name="movie_details_title">Movie Details</string>
 </resources>

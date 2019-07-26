@@ -7,10 +7,11 @@ import android.support.v7.widget.Toolbar
 import android.view.MenuItem
 import com.example.movietrailerfinder.R
 import com.example.movietrailerfinder.repository.model.Movie
+import com.example.movietrailerfinder.utils.addFragment
 import com.example.movietrailerfinder.utils.setToolbar
 import com.example.movietrailerfinder.utils.showHomeFromToolbar
-import com.example.movietrailerfinder.utils.startActivityOfClass
 import com.example.movietrailerfinder.view.activities.base.RxActivity
+import com.example.movietrailerfinder.view.fragments.MovieDetailsFragment
 
 class MovieDetailsActivity : RxActivity() {
 
@@ -27,8 +28,12 @@ class MovieDetailsActivity : RxActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
+    val movieDetails = intent.getParcelableExtra<Movie>(MOVIE_KEY)
     setContentView(R.layout.activity_main)
     setupToolbar()
+    if (savedInstanceState == null) {
+      addFragment(R.id.container, MovieDetailsFragment.newInstance(movieDetails))
+    }
   }
 
   private fun setupToolbar() {
