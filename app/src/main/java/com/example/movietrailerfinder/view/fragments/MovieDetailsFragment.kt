@@ -7,13 +7,13 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.target.Target
 import com.example.movietrailerfinder.BuildConfig
 import com.example.movietrailerfinder.R
 import com.example.movietrailerfinder.repository.model.Movie
 import com.example.movietrailerfinder.utils.remove
 import com.example.movietrailerfinder.utils.setTitleOnToolbar
-import com.squareup.picasso.Callback
-import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_movie_details.*
 
 class MovieDetailsFragment : Fragment() {
@@ -52,17 +52,10 @@ class MovieDetailsFragment : Fragment() {
     movieTitle.text = movie?.title
     movieDescription.text = movie?.overview
     Log.d("asf", "${BuildConfig.IMAGES_API_URL}${movie?.posterPath}")
-    Picasso.get()
+    Glide.with(context!!)
       .load("${BuildConfig.IMAGES_API_URL}${movie?.posterPath}")
+      .placeholder(R.drawable.progress)
       .error(R.drawable.icon_error)
-      .into(moviePoster, object: Callback {
-        override fun onSuccess() {
-          progressBar.remove()
-        }
-
-        override fun onError(e: Exception?) {
-          progressBar.remove()
-        }
-      })
+      .into(moviePoster)
   }
 }

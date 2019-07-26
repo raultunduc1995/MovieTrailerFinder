@@ -8,16 +8,14 @@
     <ImageView android:id="@+id/moviePoster"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:layout_gravity="center"
-               app:layout_constraintTop_toTopOf="parent"
-               app:layout_constraintStart_toStartOf="parent"
-               android:background="@drawable/image_border" />
+               android:layout_gravity="center" app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintStart_toStartOf="parent"/>
 
 
     <TextView android:id="@+id/movieTitle"
+              android:layout_width="0dp"
               android:maxLines="1"
               android:ellipsize="end"
-              android:layout_width="0dp"
               android:layout_height="wrap_content"
               android:layout_marginStart="@dimen/BU6"
               app:layout_constraintStart_toEndOf="@+id/moviePoster"
@@ -25,22 +23,23 @@
               android:text="@string/app_name"
               android:textSize="@dimen/default_title_text"
               app:layout_constraintTop_toBottomOf="@+id/movieId"
-              android:layout_marginEnd="@dimen/BU3"
+              android:layout_marginEnd="8dp"
               app:layout_constraintEnd_toEndOf="parent"
               app:layout_constraintHorizontal_bias="0.0"/>
 
     <TextView android:id="@+id/movieDescription"
               android:layout_width="0dp"
               android:layout_height="wrap_content"
-              android:layout_marginTop="@dimen/BU6"
               android:text="@string/app_name"
               android:textSize="@dimen/default_text"
-              android:maxLines="50"
-              app:layout_constraintTop_toBottomOf="@+id/moviePoster"
-              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintStart_toEndOf="@+id/moviePoster"
+              android:layout_marginStart="@dimen/BU6"
+              app:layout_constraintTop_toBottomOf="@+id/movieTitle"
+              android:layout_marginTop="@dimen/BU3"
               android:layout_marginEnd="@dimen/BU3"
+              android:maxLines="50"
               app:layout_constraintEnd_toEndOf="parent"
-              app:layout_constraintHorizontal_bias="0.562"/>
+              app:layout_constraintHorizontal_bias="0.0"/>
 
     <TextView android:layout_width="0dp"
               android:maxLines="1"
@@ -52,6 +51,6 @@
               android:textSize="@dimen/default_title_text"
               android:id="@+id/movieId"
               app:layout_constraintEnd_toEndOf="parent"
-              android:layout_marginEnd="@dimen/BU3"
+              android:layout_marginEnd="8dp"
               app:layout_constraintHorizontal_bias="0.0"/>
 </android.support.constraint.ConstraintLayout>
