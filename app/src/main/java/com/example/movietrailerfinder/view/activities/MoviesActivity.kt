@@ -3,11 +3,12 @@ package com.example.movietrailerfinder.view.activities
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.example.movietrailerfinder.R
 import com.example.movietrailerfinder.utils.addFragment
 import com.example.movietrailerfinder.utils.hideHomeFromToolbar
 import com.example.movietrailerfinder.utils.setToolbar
+import com.example.movietrailerfinder.view.fragments.MoviesGridFragment
 import com.example.movietrailerfinder.view.fragments.MoviesListFragment
 
 class MoviesActivity : AppCompatActivity() {
@@ -44,7 +45,7 @@ class MoviesActivity : AppCompatActivity() {
         addFragment(R.id.container, MoviesListFragment())
       }
       MoviesLayout.GRID -> {
-
+        addFragment(R.id.container, MoviesGridFragment())
       }
       else -> throw IllegalStateException("No layout was set")
     }

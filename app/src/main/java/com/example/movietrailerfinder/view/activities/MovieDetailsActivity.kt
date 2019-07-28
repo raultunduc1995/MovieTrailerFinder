@@ -3,17 +3,17 @@ package com.example.movietrailerfinder.view.activities
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.widget.Toolbar
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import com.example.movietrailerfinder.R
 import com.example.movietrailerfinder.repository.model.Movie
 import com.example.movietrailerfinder.utils.addFragment
 import com.example.movietrailerfinder.utils.setToolbar
 import com.example.movietrailerfinder.utils.showHomeFromToolbar
-import com.example.movietrailerfinder.view.activities.base.RxActivity
 import com.example.movietrailerfinder.view.fragments.MovieDetailsFragment
 
-class MovieDetailsActivity : RxActivity() {
+class MovieDetailsActivity : AppCompatActivity() {
 
   companion object {
 

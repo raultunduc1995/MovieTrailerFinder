@@ -5,20 +5,20 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion rootProject.compileSdkVersion
     defaultConfig {
         applicationId "com.example.movietrailerfinder"
-        minSdkVersion 23
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion rootProject.minSdk
+        targetSdkVersion rootProject.targetSdk
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         debug {
             debuggable true
             buildConfigField "String", "MOVIES_API_URL", "\"https://api.themoviedb.org/\""
-            buildConfigField "String", "IMAGES_API_URL", "\"http://image.tmdb.org/t/p/w342/\""
+            buildConfigField "String", "IMAGES_API_URL", "\"http://image.tmdb.org/\""
             buildConfigField "String", "MOVIES_API_KEY", "\"ff23c6431ecdbdfd9375482ecb059cf6\""
         }
 
@@ -36,6 +36,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
+    implementation "androidx.lifecycle:lifecycle-common:$rootProject.lifecycleVersion"
     implementation "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
     implementation "com.android.support:support-compat:$rootProject.supportLibraryVersion"
     implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
@@ -53,6 +54,7 @@ dependencies {
     implementation "com.google.code.gson:gson:$rootProject.gsonVersion"
     implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
     annotationProcessor "com.github.bumptech.glide:compiler:$rootProject.glideVersion"
+    implementation "com.pierfrancescosoffritti.androidyoutubeplayer:core:$rootProject.androidyoutubeplayerVersion"
 
     testImplementation "junit:junit:$rootProject.junitVersion"
     androidTestImplementation "com.android.support.test:runner:$rootProject.supportTestRunnerVersion"

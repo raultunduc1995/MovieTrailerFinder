@@ -2,14 +2,14 @@ package com.example.movietrailerfinder.view.fragments
 
 import android.content.Context
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.DividerItemDecoration
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.movietrailerfinder.R
 import com.example.movietrailerfinder.repository.model.Movie
 import com.example.movietrailerfinder.utils.hide
@@ -64,9 +64,7 @@ class MoviesListFragment : RxFragment() {
         .observeOn(AndroidSchedulers.mainThread())
         .subscribe({ movies ->
           dismissLading()
-          adapter.data.clear()
-          adapter.data.addAll(movies)
-          adapter.notifyDataSetChanged()
+          updateMoviesData(movies)
         }, { error ->
           dismissLading()
           Log.e(TAG, error.message, error)
@@ -82,6 +80,12 @@ class MoviesListFragment : RxFragment() {
   private fun dismissLading() {
     moviesList.show()
     progressBar.hide()
+  }
+
+  private fun updateMoviesData(movies: List<Movie>) {
+    adapter.data.clear()
+    adapter.data.addAll(movies)
+    adapter.notifyDataSetChanged()
   }
 }
 

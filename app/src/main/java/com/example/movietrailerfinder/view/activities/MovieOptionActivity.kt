@@ -2,14 +2,14 @@ package com.example.movietrailerfinder.view.activities
 
 import android.content.Context
 import android.os.Bundle
-import android.support.v7.app.AlertDialog
-import android.support.v7.widget.Toolbar
 import android.util.Log
 import android.widget.Button
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import com.example.movietrailerfinder.R
 import com.example.movietrailerfinder.utils.hideHomeFromToolbar
 import com.example.movietrailerfinder.utils.setToolbar
-import com.example.movietrailerfinder.view.activities.base.RxActivity
 
 enum class MoviesLayout {
   NONE,
@@ -17,7 +17,7 @@ enum class MoviesLayout {
   GRID
 }
 
-class MovieOptionActivity : RxActivity() {
+class MovieOptionActivity : AppCompatActivity() {
 
   companion object {
     const val TAG = "MovieOptionActivity"

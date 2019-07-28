@@ -8,6 +8,14 @@ import io.reactivex.Flowable
 class MoviesViewModel {
 
   companion object {
+    private val YOUTUBE_VIDEOS_IDS = mutableListOf(
+      "_swJQVGuauw",
+      "T22yr9PG-Ig",
+      "Tg6HGcj7pGo",
+      "NxwJ1q7cIck",
+      "z5WrgDzNIZ0",
+      "GX8Hg6kWQYI"
+    )
     private lateinit var INSTANCE: MoviesViewModel
 
     fun getInstance(): MoviesViewModel {
@@ -22,4 +30,6 @@ class MoviesViewModel {
     ApiProvider.getMoviesApi()
       .getMovies(BuildConfig.MOVIES_API_KEY)
       .map { result -> result.results }
+
+  fun getYoutubeVideos(): List<String> = YOUTUBE_VIDEOS_IDS
 }
